@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "heading": "Service-1",
+      "description": "this is description of service 1"
+    },
+    {
+      "id": 2,
+      "heading": "Service-2",
+      "description": "this is description of service 2"
+    },
+    {
+      "id": 3,
+      "heading": "Service-3",
+      "description": "this is description of service 3"
+    }
+  ]
+}

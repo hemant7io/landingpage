@@ -5,22 +5,28 @@ const Card = (props: card) => {
   const buyhandler = () => {
     console.log("click");
   };
+  console.log(heading);
   return (
-    <div>
+    <div className="text-white shadow-sm shadow-[#eee] my-4 p-4 rounded-md ">
       <div>
         <Image
           src={image}
-          width={400}
-          height={400}
+          width={200}
+          height={200}
           alt="image"
-          className="rounded  px-4"
+          className="rounded-md "
         />
       </div>
       <div>
-        <h1>{heading}</h1>
-        <p>{description}</p>
+        <h1 className="text-[2rem] font-bold">{heading}</h1>
+        <p className="text-[#eee] text-[1.2rem] capitalize">{description}</p>
       </div>
-      <button onClick={buyhandler}>Buy</button>
+      <button
+        onClick={buyhandler}
+        className="bg-[#091c87] mt-4 py-2 px-5 rounded-sm hover:text-black hover:bg-[#eee]"
+      >
+        Buy
+      </button>
     </div>
   );
 };
@@ -28,8 +34,8 @@ const Card = (props: card) => {
 export default Card;
 
 interface card {
-  image: string;
+  image: any;
   heading: string;
   description: string;
-  buy: () => any;
+  buy?: () => any;
 }
