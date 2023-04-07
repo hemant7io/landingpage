@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import laptop from "../assests/laptop.jpg";
 import Card from "../components/card";
 import FormSection from "../components/formSection";
+import Footer from "../components/footer";
 //nodejs import
 import fs from "fs/promises";
 import path from "path";
@@ -81,6 +82,7 @@ export default function Home(props: any) {
         <h1 className="text-[2rem] text-center font-bold my-8 ">Contact us</h1>
         <FormSection />
       </section>
+      <Footer />
     </div>
   );
 }
