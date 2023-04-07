@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import laptop from "../assests/laptop.jpg";
+import Card from "../components/card";
+import FormSection from "../components/formSection";
+//nodejs import
 import fs from "fs/promises";
 import path from "path";
-import Card from "../components/card";
 const inter = Inter({ subsets: ["latin"] });
 
 export const getStaticProps = async () => {
@@ -23,7 +25,10 @@ export default function Home(props: any) {
 
   return (
     <div className="sm:mx-[8rem] pt-[10rem]  sm:pt-0  " id="home">
-      <main className="h-[600px] flex justify-center sm:justify-between  sm:items-center flex-wrap sm:flex-nowrap  ">
+      <main
+        className="h-[600px] flex justify-center sm:justify-between  sm:items-center flex-wrap sm:flex-nowrap  "
+        id="home"
+      >
         <div className="">
           <Image
             src={laptop}
@@ -58,9 +63,23 @@ export default function Home(props: any) {
         </div>
       </section>
 
-      <section>
-        <h1></h1>
-        <div>{[1, 2, 3, 4, 5].map()}</div>
+      <section className="mt-[2rem] bg-[#eee]  rounded-md text-black pt-5">
+        <h1 className="text-center text-[2rem] capitalize font-bold ">
+          Client that love us
+        </h1>
+        <div className="flex justify-center items-center flex-wrap">
+          {[1, 2, 3, 4, 5].map((index) => (
+            <div key={index}>
+              <div className="py-4 px-8 bg-black text-white w-max rounded-md m-4 cursor-pointer">
+                company-{index}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="pb-4" id="contact">
+        <h1 className="text-[2rem] text-center font-bold my-8 ">Contact us</h1>
+        <FormSection />
       </section>
     </div>
   );

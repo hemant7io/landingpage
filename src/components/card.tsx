@@ -5,7 +5,7 @@ const Card = (props: card) => {
   const buyhandler = () => {
     console.log("click");
   };
-  console.log(heading);
+
   return (
     <div className="text-white shadow-sm shadow-[#eee] my-4 p-4 rounded-md ">
       <div>

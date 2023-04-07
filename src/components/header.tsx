@@ -22,7 +22,7 @@ const Header = () => {
         >
           <li className="mx-2 p-2 cursor-pointer hover:text-[#ffb366]">
             {" "}
-            <Link href="#Home" onClick={togglehandler}>
+            <Link href="#home" onClick={togglehandler}>
               Home
             </Link>
           </li>
@@ -31,7 +31,7 @@ const Header = () => {
               services
             </Link>
           </li>
-          <li className="mx-2 p-2 cursor-pointer hover:text-[#ffb366]">Team</li>
+
           <li className="mx-2 p-2 cursor-pointer hover:text-[#ffb366]">
             <Link href="#contact" onClick={togglehandler}>
               Contact
