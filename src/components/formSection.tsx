@@ -11,25 +11,28 @@ const FormSection = () => {
   return (
     <form
       onSubmit={formhandler}
-      className="flex justify-center items-center flex-col  sm:w-[50%] sm:mx-auto shadow shadow-[#eee] rounded-md"
+      className="flex justify-center items-center flex-col  sm:w-[50%] sm:mx-auto shadow shadow-[#eee] rounded-md text-black"
     >
       <input
         type="text"
         placeholder="Enter your Name"
         className="px-4 py-2 rounded-md my-4 w-[80%]"
+        value={name}
         onChange={(e) => setName(e?.target?.value)}
       />
       <input
         type="email"
         placeholder="Enter your Email"
         className="px-4 py-2 rounded-md my-4 w-[80%]"
+        value={email}
         onChange={(e) => setEmail(e?.target?.value)}
       />
       <textarea
         rows={5}
         cols={30}
         placeholder="Enter your message"
-        className="px-4 py-2 rounded-md my-4 w-[80%]"
+        className="px-4 py-2 rounded-md my-4 w-[80%] text-black"
+        value={message}
         onChange={(e) => setMessage(e?.target?.value)}
       />
       <button
