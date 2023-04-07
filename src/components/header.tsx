@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineBars } from "react-icons/ai";
 const Header = () => {
@@ -19,13 +20,22 @@ const Header = () => {
               : " -right-[30rem] -top-[20rem] "
           }  sm:relative  sm:w-full  sm:top-0 sm:right-0 sm:h-full  sm:flex-row flex items-center`}
         >
-          <li className="mx-2 p-2 cursor-pointer hover:text-[#ffb366]">Home</li>
           <li className="mx-2 p-2 cursor-pointer hover:text-[#ffb366]">
-            services
+            {" "}
+            <Link href="#Home" onClick={togglehandler}>
+              Home
+            </Link>
+          </li>
+          <li className="mx-2 p-2 cursor-pointer hover:text-[#ffb366]">
+            <Link href="#services" onClick={togglehandler}>
+              services
+            </Link>
           </li>
           <li className="mx-2 p-2 cursor-pointer hover:text-[#ffb366]">Team</li>
           <li className="mx-2 p-2 cursor-pointer hover:text-[#ffb366]">
-            Contact
+            <Link href="#contact" onClick={togglehandler}>
+              Contact
+            </Link>
           </li>
         </ul>
         <AiOutlineBars className="sm:hidden " onClick={togglehandler} />
